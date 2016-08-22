@@ -1,6 +1,6 @@
 # sdp
-if(fault == Gavin){
-  System.out.println("Goddamit Gavin");
+if(fault == Ethan){
+  System.out.println("Goddamit Ethan");
 }else{
-  System.out.println("Goddamit Rudy");
+  System.out.println("Goddamit Callum");
 }
