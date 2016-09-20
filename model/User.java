@@ -26,10 +26,6 @@ public class User {
 		this.lastName = new SimpleStringProperty(lastName);
 		this.savings = new SimpleFloatProperty(savings);
 
-
-
-		// Useful data here
-
 		jobsData.add(new Job("Work", 150.27f));
 		jobsData.add(new Job("Student Support", 149.50f));
 
@@ -38,9 +34,6 @@ public class User {
 		expencesData.add(new Expense("Water", 36.48f));
 		expencesData.add(new Expense("Internet", 19.99f));
 		expencesData.add(new Expense("Phone", 39.99f));
-
-
-
 	}
 
 	public ObservableList<Job> getJobsData(){
@@ -63,6 +56,28 @@ public class User {
 	 */
 	public void setLName(String lName){
 		this.lastName = new SimpleStringProperty(lName);
+	}
+
+	/**
+	 * Sets the savings
+	 * will probably remove later due to security
+	 */
+	public void updateSavings(Float savings){
+		this.savings = new SimpleFloatProperty(savings);
+	}
+
+	/**
+	 * Adds to Savings
+	 */
+	public void addToSavings(float add){
+		this.savings = new SimpleFloatProperty(this.getSavings()+add);
+	}
+
+	/**
+	 * Removes from Savings
+	 */
+	public void removeFromSavings(float remove){
+		this.savings = new SimpleFloatProperty(this.getSavings()-remove);
 	}
 
 	/**
@@ -91,12 +106,20 @@ public class User {
 		return lastName.get();
 	}
 
+	public float getSavings(){
+		return savings.get();
+	}
+
 	public StringProperty firstNameProperty() {
         return firstName;
     }
 
 	public StringProperty lastNameProperty(){
 		return lastName;
+	}
+
+	public FloatProperty savingsProperty(){
+		return savings;
 	}
 
 }
