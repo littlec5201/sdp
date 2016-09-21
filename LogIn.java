@@ -13,6 +13,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -91,6 +92,7 @@ public class LogIn implements ActionListener, KeyListener{
        
        loginButton.addActionListener(this);
        cancelButton.addActionListener(this);
+       usernameField.addKeyListener(this);
        passwordField.addKeyListener(this);
        
        
@@ -129,10 +131,11 @@ public class LogIn implements ActionListener, KeyListener{
             }
         }
         if(incorrectUsername == users.size()){
-            System.out.println("Incorrect Username!");
+        	JOptionPane.showMessageDialog(frame, "Incorrect Username!");
+//            System.out.println("Incorrect Username!");
             return false;
         }
-        System.out.println("Correct Username!");
+//        System.out.println("Correct Username!");
         return true;
     }
     
@@ -146,10 +149,11 @@ public class LogIn implements ActionListener, KeyListener{
             }
         }
         if(incorrectPassword == 1){
-            System.out.println("Incorrect password!");
+        	JOptionPane.showMessageDialog(frame, "Incorrect password!");
+//            System.out.println("Incorrect password!");
             return false;
         }
-        System.out.println("Correct password!");
+//        System.out.println("Correct password!");
         return true;
     }
     
@@ -158,11 +162,14 @@ public class LogIn implements ActionListener, KeyListener{
     public boolean checkUsernameAndPassword(String username, String password){
         for(int i = 0; i < users.size(); i++){
             if(users.get(i)[0].equals(username) && users.get(i)[1].equals(password)){
-                    System.out.println("Log in successful!");
+            	JOptionPane.showMessageDialog(frame, "Log in successful!");
+            	frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+//                    System.out.println("Log in successful!");
                     return true;
             }
         }
-        System.out.println("Log in unsuccessful!");
+//        JOptionPane.showMessageDialog(frame, "Log in unsuccessful!");
+//        System.out.println("Log in unsuccessful!");
         return false;
     }
     
