@@ -1,7 +1,15 @@
 package com.development.software.finance.model;
 
+import java.time.LocalDate;
+
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import com.development.software.finance.util.LocalDateAdapter;
+
 import javafx.beans.property.FloatProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -9,10 +17,16 @@ public class Job {
 
 	private StringProperty jobName;
 	private FloatProperty jobIncome;
+	private final ObjectProperty<LocalDate> date;
+
+	public Job(){
+		this(null,0);
+	}
 
 	public Job(String jobName, float income){
 		this.jobName = new SimpleStringProperty(jobName);
 		this.jobIncome = new SimpleFloatProperty(income);
+		this.date = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 9, 9));
 
 	}
 
@@ -55,4 +69,16 @@ public class Job {
 		return jobString;
 	}
 
+	public ObjectProperty<LocalDate> getDateObject() {
+		return date;
+	}
+
+	 @XmlJavaTypeAdapter(LocalDateAdapter.class)
+	    public LocalDate getDate() {
+	        return date.get();
+	    }
+
+	 public void setDate(LocalDate date) {
+	        this.date.set(date);
+	    }
 }

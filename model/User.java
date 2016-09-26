@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 
 public class User {
 
+	private StringProperty userName; // added, will be displayed on user page
 	private StringProperty firstName;
 	private StringProperty lastName;
 	private FloatProperty savings;
@@ -22,18 +23,21 @@ public class User {
 	}
 
 	public User(String firstName, String lastName, float savings){
+		this.userName = new SimpleStringProperty("RockGOD"); // change later
 		this.firstName = new SimpleStringProperty(firstName);
 		this.lastName = new SimpleStringProperty(lastName);
 		this.savings = new SimpleFloatProperty(savings);
 
-		jobsData.add(new Job("Work", 150.27f));
-		jobsData.add(new Job("Student Support", 149.50f));
 
-		expencesData.add(new Expense("Rent", 150.00f));
-		expencesData.add(new Expense("Food", 33.98f));
-		expencesData.add(new Expense("Water", 36.48f));
-		expencesData.add(new Expense("Internet", 19.99f));
-		expencesData.add(new Expense("Phone", 39.99f));
+		// for testing purposes
+//		jobsData.add(new Job("Work", 150.27f));
+//		jobsData.add(new Job("Student Support", 149.50f));
+//
+//		expencesData.add(new Expense("Rent", 150.00f));
+//		expencesData.add(new Expense("Food", 33.98f));
+//		expencesData.add(new Expense("Water", 36.48f));
+//		expencesData.add(new Expense("Internet", 19.99f));
+//		expencesData.add(new Expense("Phone", 39.99f));
 	}
 
 	public ObservableList<Job> getJobsData(){
@@ -106,6 +110,10 @@ public class User {
 		return lastName.get();
 	}
 
+	public String getUserName(){
+		return userName.get();
+	}
+
 	public float getSavings(){
 		return savings.get();
 	}
@@ -120,6 +128,14 @@ public class User {
 
 	public FloatProperty savingsProperty(){
 		return savings;
+	}
+
+	public StringProperty getUserNameProperty() {
+		return userName;
+	}
+
+	public void setUserName(StringProperty userName) {
+		this.userName = userName;
 	}
 
 }
