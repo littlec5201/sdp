@@ -8,7 +8,6 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -21,20 +20,35 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
                <children>
-                  <Label layoutX="1168.0" layoutY="14.0" text="User Name" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <Label fx:id="userID" layoutX="644.0" layoutY="5.0" text="User Name" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="5.0">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Label layoutX="14.0" layoutY="14.0" text="Date" textOverrun="CLIP" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <Label fx:id="currentDate" layoutX="14.0" layoutY="14.0" text="Date" textOverrun="CLIP" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <ProgressBar layoutX="90.0" layoutY="12.0" prefHeight="26.0" prefWidth="474.0" progress="0.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="234.0" AnchorPane.topAnchor="35.0" />
-                  <Label layoutX="90.0" layoutY="12.0" text="Savings Goal" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="12.0">
+                  <ProgressBar layoutX="90.0" layoutY="12.0" prefHeight="26.0" prefWidth="441.0" progress="0.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="267.0" AnchorPane.topAnchor="35.0" />
+                  <Label layoutX="90.0" layoutY="12.0" text="Savings Goal" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="12.0">
                      <font>
                         <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="savings" layoutX="657.0" layoutY="40.0" prefHeight="35.0" prefWidth="91.0" text="Label" AnchorPane.rightAnchor="16.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="545.0" layoutY="40.0" text="Savings:" AnchorPane.rightAnchor="170.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="569.0" layoutY="5.0" text="User:" AnchorPane.rightAnchor="170.0">
+                     <font>
+                        <Font size="28.0" />
                      </font>
                   </Label>
                </children>
@@ -83,17 +97,16 @@
                                                               </rowConstraints>
                                                                <children>
                                                                   <Label text="Job Name" />
-                                                                  <Label text="Hours Per Week" GridPane.rowIndex="1" />
-                                                                  <Label text="Pay Per Week" GridPane.rowIndex="2" />
+                                                                  <Label text="Hours Per Week" GridPane.rowIndex="2" />
+                                                                  <Label text="Income" GridPane.rowIndex="1" />
                                                                   <Label text="Pay Date" GridPane.rowIndex="4" />
                                                                   <Label text="Total Earned" GridPane.rowIndex="5" />
                                                                   <Label text="Hourly Pay" GridPane.rowIndex="3" />
-                                                                  <TextField fx:id="jobName" editable="false" GridPane.columnIndex="1" />
-                                                                  <TextField fx:id="hoursPerWeek" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                  <TextField fx:id="payPerWeek" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                                  <TextField fx:id="hourlyPay" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                                  <TextField fx:id="payDay" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                                  <TextField editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                  <Label fx:id="jobName" text="Label" GridPane.columnIndex="1" />
+                                                                  <Label fx:id="hoursPerWeek" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                  <Label fx:id="payPerWeek" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                  <Label fx:id="hourlyPay" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                  <Label fx:id="payDay" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                                </children>
                                                             </GridPane>
                                                             <Label layoutX="14.0" layoutY="-4.0" text="Job Details" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="0.0">
@@ -146,10 +159,11 @@
                                                                <children>
                                                                   <Label text="Expense" />
                                                                   <Label text="Cost" GridPane.rowIndex="1" />
-                                                                  <TextField fx:id="expenseName" editable="false" GridPane.columnIndex="1" />
-                                                                  <TextField fx:id="expense" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                  <Label text="Repeat" GridPane.rowIndex="2" />
-                                                                  <TextField editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                  <Label text="Repeat" GridPane.rowIndex="3" />
+                                                                  <Label text="Date" GridPane.rowIndex="2" />
+                                                                  <Label fx:id="expenseName" text="Label" GridPane.columnIndex="1" />
+                                                                  <Label fx:id="expense" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                  <Label fx:id="expenseDate" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                </children>
                                                             </GridPane>
                                                             <Label layoutX="14.0" layoutY="-4.0" text="Expense Details" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="0.0">
@@ -172,12 +186,12 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Add Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                              <Button layoutX="41.0" layoutY="50.0" mnemonicParsing="false" text="Edit Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0" />
-                              <Button layoutX="32.0" layoutY="96.0" mnemonicParsing="false" text="Remove Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0" />
-                              <Button layoutX="41.0" layoutY="164.0" mnemonicParsing="false" text="Add Expense..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="95.0" />
-                              <Button layoutX="33.0" layoutY="129.0" mnemonicParsing="false" text="Edit Expense..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="125.0" />
-                              <Button layoutX="41.0" layoutY="154.0" mnemonicParsing="false" text="Remove Expense..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="155.0" />
+                              <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleNewJob" text="Add Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                              <Button layoutX="41.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleEditJob" text="Edit Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0" />
+                              <Button layoutX="32.0" layoutY="96.0" mnemonicParsing="false" onAction="#handleDeleteJob" text="Remove Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0" />
+                              <Button layoutX="41.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleNewExpense" text="Add Expense..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="95.0" />
+                              <Button layoutX="33.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleEditExpense" text="Edit Expense..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="125.0" />
+                              <Button layoutX="41.0" layoutY="154.0" mnemonicParsing="false" onAction="#handleDeleteExpense" text="Remove Expense..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="155.0" />
                            </children>
                         </AnchorPane>
                     </items>
