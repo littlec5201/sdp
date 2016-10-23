@@ -5,7 +5,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="545.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.development.software.finance.view.RootLayoutController">
+<BorderPane prefHeight="545.0" prefWidth="800.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.development.software.finance.view.RootLayoutController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -18,8 +18,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Graphs">
             <items>
-              <MenuItem mnemonicParsing="false" text="Bar Chart - Savings" />
-                  <MenuItem mnemonicParsing="false" text="Pie Chart - Expenses" />
+              <MenuItem mnemonicParsing="false" onAction="#handleShowMonthlyGraph" text="Monthly Graph" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

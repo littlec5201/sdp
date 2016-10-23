@@ -92,13 +92,16 @@ public class ExpenseEditDialogController {
 			errorMessage += "No valid cost!\n";
 		}else{
 			try{
-				Float.parseFloat(costField.getText());
+				Float check = Float.parseFloat(costField.getText());
+				if(check ==0){
+					errorMessage += "Cost cannot be 0!\n";
+				}
 			}catch(NumberFormatException e){
 				errorMessage += "No valid cost (Must be a number)";
 			}
 		}
 		if(dateField.getText() == null || dateField.getText().length() == 0){
-			errorMessage += "No valid date!\n";
+			errorMessage += "No valid date! Use the format dd.mm.yyyy!\n";
 		}else{
 			if(!DateUtil.validDate(dateField.getText())){
 				errorMessage += "No valid date. Use the format dd.mm.yyyy!\n";

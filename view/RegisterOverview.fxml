@@ -6,41 +6,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="300.0" maxWidth="300.0" minHeight="300.0"
-	minWidth="300.0" prefHeight="300.0" prefWidth="300.0"
-	xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="address.view.RegisterLayoutController">
+<AnchorPane maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.development.software.finance.view.RegisterLayoutController">
 	<children>
-		<Label prefHeight="25.0" prefWidth="100.0" text="Username:"
-			AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="35.0"
-			AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="75.0" />
-		<TextField fx:id="usernameTextField" prefHeight="25.0"
-			prefWidth="100.0" AnchorPane.bottomAnchor="200.0"
-			AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0"
-			AnchorPane.topAnchor="75.0" />
-		<Label prefHeight="25.0" prefWidth="100.0" text="Password:"
-			AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="35.0"
-			AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="125.0" />
-		<PasswordField fx:id="passwordField" prefHeight="25.0"
-			prefWidth="100.0" AnchorPane.bottomAnchor="150.0"
-			AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0"
-			AnchorPane.topAnchor="125.0" />
-		<Label prefHeight="25.0" prefWidth="100.0" text="Confirm Password:"
-			AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="35.0"
-			AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="175.0" />
-		<PasswordField fx:id="confirmPasswordField" prefHeight="25.0"
-			prefWidth="100.0" AnchorPane.bottomAnchor="100.0"
-			AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0"
-			AnchorPane.topAnchor="175.0" />
-		<Button fx:id="homeButton" maxHeight="25.0" maxWidth="75.0"
-			minHeight="25.0" minWidth="75.0" mnemonicParsing="false" onAction="#handleHome"
-			prefHeight="25.0" prefWidth="75.0" text="Home"
-			AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0"
-			AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="250.0" />
-		<Button fx:id="registerButton" maxHeight="25.0" maxWidth="75.0"
-			minHeight="25.0" minWidth="75.0" mnemonicParsing="false" onAction="#handleRegister"
-			prefHeight="25.0" prefWidth="75.0" text="Register"
-			AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="175.0"
-			AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="250.0" />
+		<Label prefHeight="25.0" prefWidth="100.0" text="Username:" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="75.0" />
+		<TextField fx:id="usernameTextField" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="75.0" />
+		<Label prefHeight="25.0" prefWidth="100.0" text="Password:" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="125.0" />
+		<PasswordField fx:id="passwordField" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="125.0" />
+		<Label prefHeight="25.0" prefWidth="100.0" text="Confirm Password:" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="175.0" />
+		<PasswordField fx:id="confirmPasswordField" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="175.0" />
+		<Button fx:id="homeButton" layoutX="26.0" layoutY="229.0" maxHeight="42.0" maxWidth="118.0" minHeight="25.0" minWidth="75.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="42.0" prefWidth="118.0" text="Home" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="156.0" AnchorPane.topAnchor="229.0" />
+		<Button fx:id="registerButton" layoutX="156.0" layoutY="229.0" maxHeight="42.0" maxWidth="118.0" minHeight="25.0" minWidth="75.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="42.0" prefWidth="118.0" text="Register" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="229.0" />
 	</children>
 </AnchorPane>

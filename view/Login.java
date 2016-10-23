@@ -1,43 +1,32 @@
-package address.view;
+package com.development.software.finance.view;
 
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.WindowEvent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
+
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
+
+import com.development.software.finance.MainApp;
+
+
 
 /**
  *
  * @author scz5487
  */
 public class Login {
+
+	MainApp mainApp;
 
 	/* ArrayList to hold a list of temporary users until DB is constructed. */
 	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -62,6 +51,8 @@ public class Login {
 
         } catch (Exception e) {}
         logInAttempt(username, password);
+//        mainApp = new MainApp();
+//        WelcomeLayoutController.loginStage.hide();
 	}
 
 	/*
@@ -80,6 +71,10 @@ public class Login {
 				String password = passwordList.item(0).getTextContent();
 				if (searchPassword.compareTo(decryptPassword(password)) == 0) {
 					JOptionPane.showMessageDialog(new JFrame(), "Login successful!");
+					//////////////////////
+					mainApp = new MainApp(username);
+					// mainApp.setUserName(userName);
+			        WelcomeLayoutController.loginStage.hide();
 					return true;
 				}
 				JOptionPane.showMessageDialog(new JFrame(), "Incorrect password!");

@@ -53,6 +53,10 @@ public class RootLayoutController {
         }
 	}
 
+	@FXML
+	private void handleShowMonthlyGraph() {
+	  mainApp.showMonthlyGraph();
+	}
 
 
 	@FXML

@@ -10,13 +10,14 @@ import org.junit.Test;
 public class UserTest {
 
 	private User user;
+	private String uName = "Batman";
 	private String fName = "Bruce";
 	private String lName = "Wayne";
 	private float savings = 10000000.50f;
 
 	@Before
 	public void setUp(){
-		this.user = new User(fName,lName,savings);
+		this.user = new User(uName,fName,lName,savings);
 	}
 
 	@Test

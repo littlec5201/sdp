@@ -104,13 +104,16 @@ public class JobEditDialogController {
 			errorMessage += "No valid income!\n";
 		}else{
 			try{
-				Float.parseFloat(weeklyPayField.getText());
+				Float check = Float.parseFloat(weeklyPayField.getText());
+				if(check == 0){
+					errorMessage += "Income cannot be 0!\n";
+				}
 			}catch(NumberFormatException e){
 				errorMessage += "No valid income (Must be a number)!\n";
 			}
 		}
 		if(dateField.getText() == null || dateField.getText().length() == 0){
-			errorMessage += "No valid date!\n";
+			errorMessage += "No valid date! Use the format dd.mm.yyyy!\n";
 		}else{
 			if(!DateUtil.validDate(dateField.getText())){
 				errorMessage += "No valid date. Use the format dd.mm.yyyy!\n";
