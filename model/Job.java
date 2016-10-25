@@ -26,7 +26,7 @@ public class Job {
 	public Job(String jobName, float income){
 		this.jobName = new SimpleStringProperty(jobName);
 		this.jobIncome = new SimpleFloatProperty(income);
-		this.date = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 9, 9));
+		this.date = new SimpleObjectProperty<LocalDate>(LocalDate.of(2016, 1, 1));
 
 	}
 

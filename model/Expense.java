@@ -26,7 +26,7 @@ public class Expense {
 	public Expense(String name, float cost){
 		this.expenseName = new SimpleStringProperty(name);
 		this.cost = new SimpleFloatProperty(cost);
-		this.date = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 9, 9));
+		this.date = new SimpleObjectProperty<LocalDate>(LocalDate.of(2016, 1, 1));
 	}
 
 	public StringProperty expensesNameProperty(){

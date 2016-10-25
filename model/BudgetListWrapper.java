@@ -14,8 +14,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "budget")
 public class BudgetListWrapper {
 
+	private String userName;
 	private List<Expense> expenses;
 	private List<Job> jobs;
+
+	@XmlElement(name = "username")
+	public String getUserName(){
+		return userName;
+	}
 
 	@XmlElement(name = "expense")
 	public List<Expense> getExpenses(){
@@ -27,6 +33,10 @@ public class BudgetListWrapper {
 		return jobs;
 	}
 
+	public void setUserName(String userName){
+		this.userName = userName;
+	}
+
 	public void setExpenses(List<Expense> expenses){
 		this.expenses = expenses;
 	}
@@ -34,4 +44,5 @@ public class BudgetListWrapper {
 	public void setJobs(List<Job> jobs){
 		this.jobs = jobs;
 	}
+
 }

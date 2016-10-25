@@ -9,21 +9,24 @@ import javafx.collections.ObservableList;
 
 public class User {
 
-	private StringProperty userName; // added, will be displayed on user page
+	private StringProperty userName;
 	private StringProperty firstName;
 	private StringProperty lastName;
 	private FloatProperty savings;
+
+	// contain file file for user xml
+	String filePath;
 
 	private ObservableList<Job> jobsData = FXCollections.observableArrayList();
 	private ObservableList<Expense> expencesData = FXCollections.observableArrayList();
 
 
 	public User(){
-		this(null, null, 0.00f);
+		this(null, null, null, 0.00f);
 	}
 
-	public User(String firstName, String lastName, float savings){
-		this.userName = new SimpleStringProperty("RockGOD"); // change later
+	public User(String userName, String firstName, String lastName, float savings){
+		this.userName = new SimpleStringProperty(userName); // change later
 		this.firstName = new SimpleStringProperty(firstName);
 		this.lastName = new SimpleStringProperty(lastName);
 		this.savings = new SimpleFloatProperty(savings);

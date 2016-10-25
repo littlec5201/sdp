@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="520.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.development.software.finance.view.UserOverviewController">
+<AnchorPane prefHeight="520.0" prefWidth="800.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.development.software.finance.view.UserOverviewController">
    <children>
-      <SplitPane dividerPositions="0.14206128133704735" layoutX="382.0" layoutY="60.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.14206128133704735" layoutX="382.0" layoutY="60.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" stylesheets="@DarkTheme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="background" stylesheets="@DarkTheme.css" SplitPane.resizableWithParent="false">
                <children>
                   <Label fx:id="userID" layoutX="644.0" layoutY="5.0" text="User Name" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="5.0">
                      <font>
@@ -53,19 +53,19 @@
                   </Label>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@DarkTheme.css">
                <children>
                   <SplitPane dividerPositions="0.8291457286432161" prefHeight="441.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <TabPane prefHeight="439.0" prefWidth="234.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TabPane prefHeight="439.0" prefWidth="234.0" styleClass="background" stylesheets="@DarkTheme.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <tabs>
                                   <Tab text="Income">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <SplitPane dividerPositions="0.20100502512562815" prefHeight="584.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <SplitPane dividerPositions="0.3216995447647951" prefHeight="584.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                   <items>
                                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                                          <children>
@@ -80,7 +80,7 @@
                                                             </TableView>
                                                          </children>
                                                       </AnchorPane>
-                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
                                                          <children>
                                                             <GridPane layoutX="14.0" layoutY="32.0" prefHeight="180.0" prefWidth="404.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="32.0">
                                                               <columnConstraints>
@@ -171,7 +171,6 @@
                                                                   <Font name="System Bold" size="25.0" />
                                                                </font>
                                                             </Label>
-                                                            <Button layoutX="567.0" layoutY="371.0" mnemonicParsing="false" text="Button" />
                                                          </children>
                                                       </AnchorPane>
                                                    </items>
@@ -184,7 +183,7 @@
                               </TabPane>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@DarkTheme.css">
                            <children>
                               <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleNewJob" text="Add Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
                               <Button layoutX="41.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleEditJob" text="Edit Job..." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0" />

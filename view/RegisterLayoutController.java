@@ -1,14 +1,9 @@
-package address.view;
+package com.development.software.finance.view;
 
-import address.MainApp;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 
 public class RegisterLayoutController {
 

@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.WelcomeLayoutController">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.development.software.finance.view.WelcomeLayoutController">
    <children>
     <Button layoutX="86.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="25.0" prefWidth="75.0" text="Login" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="150.0" />
       <Button layoutX="180.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="25.0" prefWidth="75.0" text="Register" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="150.0" />
       <Button layoutX="120.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="75.0" text="Exit" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="200.0" />
-      <Label layoutX="50.0" layoutY="51.0" prefHeight="75.0" prefWidth="200.0" text="Welcome to the Finance Calculator!" />
+      <Label layoutX="50.0" layoutY="51.0" prefHeight="75.0" prefWidth="200.0" text="Welcome to the Finance Calculator!" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
    </children>
 </AnchorPane>

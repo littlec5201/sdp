@@ -1,15 +1,9 @@
-package address.view;
+package com.development.software.finance.view;
 
-import java.io.IOException;
 
-import address.MainApp;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 public class LoginLayoutController {
 
@@ -23,8 +17,8 @@ public class LoginLayoutController {
 		String username = usernameTextField.getText();
 		String password = passwordField.getText();
 		Login l = new Login(username, password);
-		usernameTextField.setText("");
-		passwordField.setText("");
+//		usernameTextField.setText("");
+//		passwordField.setText("");
 	}
 
 	@FXML

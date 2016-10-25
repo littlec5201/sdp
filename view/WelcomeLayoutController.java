@@ -1,14 +1,11 @@
-package address.view;
+package com.development.software.finance.view;
 
-import java.io.IOException;
 
-import address.MainApp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class WelcomeLayoutController {
@@ -17,8 +14,8 @@ public class WelcomeLayoutController {
 	@FXML
 	public void handleLogin() {
 		try {
-			welcomeStage = MainApp.welcomeStage;
-			MainApp.welcomeStage.hide();
+			welcomeStage = LoginApp.welcomeStage;
+			LoginApp.welcomeStage.hide();
 	    	loginStage = new Stage();
 	    	loginStage.setTitle("Login");
 	    	BorderPane root = new BorderPane();
@@ -39,8 +36,8 @@ public class WelcomeLayoutController {
 	@FXML
 	public void handleRegister() {
 		try {
-			welcomeStage = MainApp.welcomeStage;
-			MainApp.welcomeStage.hide();
+			welcomeStage = LoginApp.welcomeStage;
+			LoginApp.welcomeStage.hide();
 	    	registerStage = new Stage();
 	    	registerStage.setTitle("Register");
 	    	BorderPane root = new BorderPane();

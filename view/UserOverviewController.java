@@ -76,22 +76,19 @@ public class UserOverviewController {
 
 	@FXML
 	private void initialize(){
-		System.out.println("Test");
+//		System.out.println("Test");
 
 		// Initialize the two tables with two columns each (name and price)
 		jobNameColumn.setCellValueFactory(cellData -> cellData.getValue().jobnameProperty());
 		jobFloatColumn.setCellValueFactory(cellData -> cellData.getValue().jobIncomeProperty().asObject());
-		//jobFloatColumn.setCellValueFactory(cellData -> new SimpleStringProperty("" + cellData.getValue().jobIncomeProperty().get()));
 		expenseNameColumn.setCellValueFactory(cellData -> cellData.getValue().expensesNameProperty());
 		expenseFloatColumn.setCellValueFactory(cellData -> cellData.getValue().expensesCostProperty().asObject());
-		//expenseFloatColumn.setCellValueFactory(cellData -> new SimpleStringProperty("" + cellData.getValue().expensesCostProperty().get()));
 
 		showJobDetails(null);
 		showExpenseDetails(null);
 
 		// change listeners
 		jobTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> showJobDetails(newValue));
-		//expensetable below newValue changed from newValue2 (not sure why it was newValue2	)
 		expenseTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> showExpenseDetails(newValue));
 		// add change listener for savings? or savings will be changed via other methods - may not be needed
 	}
