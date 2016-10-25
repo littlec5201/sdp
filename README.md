@@ -1,6 +1,4 @@
-# sdp
-if(fault == Ethan){
-  System.out.println("Goddamit Ethan");
-}else{
-  System.out.println("Goddamit Callum");
-}
+Stream 53, Group 1
+Financial Tracker and Calculator Java application.
+
+This repositry contins all source code files for our team's Software Development Practice project.
